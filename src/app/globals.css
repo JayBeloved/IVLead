@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-iv-blue: #0b1121;
+  --color-iv-red: #e6222b;
+  --color-iv-red-light: #ff4d54;
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-outfit);
+}
+
+body {
+  background-color: var(--color-iv-blue);
+  color: #f8fafc;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
