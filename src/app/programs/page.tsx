@@ -14,7 +14,7 @@ export default function ProgramsHub() {
       status: "Upcoming",
       description: "A world-class leadership conference designed to address the leadership gap by equipping, inspiring, and empowering the next generation of leaders with practical skills, networks, and opportunities to lead with purpose.",
       link: "/programs/uylp-2026",
-      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32b7?w=800&q=80",
+      image: "https://imgur.com/T4h2nTW.jpg",
     },
     {
       id: "uylp-2025",
@@ -26,7 +26,7 @@ export default function ProgramsHub() {
       status: "Completed",
       description: "Our inaugural conference established a strong foundation of positive change. Through structured bootcamps and networking, we empowered 200 amazing emerging leaders.",
       link: "/programs/uylp-2025",
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
+      image: "https://imgur.com/oy2hDcy.jpg",
     }
   ];
 

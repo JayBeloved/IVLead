@@ -5,12 +5,12 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 export default function UYLP2025() {
   // Using generic unsplash gallery images for now per user request
   const galleryImages = [
-    "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
-    "https://images.unsplash.com/photo-1515169067868-5387ec356754?w=600&q=80",
-    "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&q=80",
-    "https://images.unsplash.com/photo-1475721025592-720905f9cb4c?w=600&q=80",
-    "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
-    "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80",
+    "https://imgur.com/T4h2nTW.jpg",
+    "https://imgur.com/tQqoXm9.jpg",
+    "https://imgur.com/TuOm5Xv.jpg",
+    "https://imgur.com/r4b96SU.jpg",
+    "https://imgur.com/HsKrhfH.jpg",
+    
   ];
 
   return (

@@ -98,7 +98,7 @@ export default function Home() {
             <div className="relative aspect-square w-full max-w-md mx-auto rounded-3xl overflow-hidden hidden md:block">
               {/* Replace with actual image later */}
               <div className="absolute inset-0 bg-slate-800 flex items-center justify-center">
-                 <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80" alt="Conference attendees" className="w-full h-full object-cover opacity-80" />
+                 <img src="https://imgur.com/T4h2nTW.jpg" alt="Conference attendees" className="w-full h-full object-cover opacity-80" />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-iv-blue to-transparent" />
               <div className="absolute bottom-8 left-8 right-8">
@@ -147,23 +147,28 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-3xl font-heading font-bold mb-4">Connect With Us</h2>
-            <p className="text-slate-400 mb-12">Follow our journey and join the conversation on Instagram <a href="#" className="text-iv-red-light hover:underline">@_IVLead</a></p>
+            <p className="text-slate-400 mb-12">Follow our journey and join the conversation on Instagram <a href="https://www.instagram.com/_ivlead?igsh=dnZtY3RiZXpzMHo5" className="text-iv-red-light hover:underline">@_ivLead</a></p>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[1, 2, 3, 4].map((item) => (
-                <div key={item} className="aspect-square bg-iv-blue border border-white/10 rounded-xl overflow-hidden relative group cursor-pointer hover:border-iv-red/30 transition-colors">
-                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
-                     <span className="text-white text-sm font-semibold flex items-center"><HeartHandshake className="w-4 h-4 mr-1"/> Instagram Post</span>
-                   </div>
-                   <div className="w-full h-full bg-slate-800 animate-pulse flex items-center justify-center">
-                     <Camera className="w-8 h-8 text-slate-600 opacity-50" />
-                   </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                "CrwO8wOoRPm",
+                "DXNNJNejI3s",
+                "DWyRBh1DNxj",
+                "DWoG7C8DFdd"
+              ].map((postId) => (
+                <div key={postId} className="w-full bg-white rounded-xl overflow-hidden shadow-xl h-[460px] border border-white/10 group hover:shadow-iv-red/20 transition-all">
+                  <iframe 
+                    src={`https://www.instagram.com/p/${postId}/embed`} 
+                    className="w-full h-full border-0"
+                    scrolling="no"
+                    title="Instagram Post"
+                  />
                 </div>
               ))}
             </div>
             
             <div className="mt-12">
-               <a href="#" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold shadow-lg hover:shadow-pink-500/25 transition-all">
+               <a href="https://www.instagram.com/_ivlead" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold shadow-lg hover:shadow-pink-500/25 transition-all">
                   <Camera className="mr-2" size={20} /> View on Instagram
                </a>
             </div>
