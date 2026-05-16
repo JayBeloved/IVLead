@@ -15,19 +15,17 @@ export default function Footer() {
               Empowering the next generation of leaders across Nigeria to drive innovation and sustained community transformation.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-slate-400 hover:text-iv-red transition-colors flex items-center justify-center p-1">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x">
-                  <path d="M4 4l16 16"/><path d="M4 20L20 4"/>
-                </svg>
+              <a href="https://x.com/_IVLead" className="text-slate-400 hover:text-iv-red transition-colors flex items-center justify-center p-1">
+               <i className="fa-brands fa-x-twitter"></i>
               </a>
-              <a href="#" className="font-semibold text-slate-400 hover:text-iv-red transition-colors flex items-center justify-center p-1">
-                In
+              <a href="https://www.linkedin.com/in/iv-lead-0497ab276" className="font-semibold text-slate-400 hover:text-iv-red transition-colors flex items-center justify-center p-1">
+               <i className="fa-brands fa-linkedin-in"></i>
               </a>
-              <a href="#" className="font-semibold text-slate-400 hover:text-iv-red transition-colors flex items-center justify-center p-1">
-                Fb
+              <a href="https://web.facebook.com/profile.php?id=100091979174903" className="font-semibold text-slate-400 hover:text-iv-red transition-colors flex items-center justify-center p-1">
+               <i className="fa-brands fa-facebook-f"></i>
               </a>
-              <a href="#" className="font-semibold text-slate-400 hover:text-iv-red transition-colors flex items-center justify-center p-1">
-                Ig
+              <a href="https://www.instagram.com/_ivlead" className="font-semibold text-slate-400 hover:text-iv-red transition-colors flex items-center justify-center p-1">
+               <i className="fa-brands fa-instagram"></i>
               </a>
             </div>
           </div>
@@ -64,13 +62,9 @@ export default function Footer() {
                 <span>+234 816 975 0080</span>
               </li>
               <li className="flex items-center text-slate-400 text-sm">
-                <Phone size={16} className="mr-2 min-w-[16px] text-iv-red" />
-                <span>+234 809 301 2313</span>
-              </li>
-              <li className="flex items-center text-slate-400 text-sm">
                 <Mail size={16} className="mr-2 min-w-[16px] text-iv-red" />
                 {/* Placeholder email, none provided in text */}
-                <span>hello@ivlead.org</span>
+                <span>info@ivlead.org</span>
               </li>
             </ul>
           </div>
