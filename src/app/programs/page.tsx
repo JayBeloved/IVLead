@@ -22,7 +22,7 @@ export default function ProgramsHub() {
       theme: "Unleash Your Leadership Potential",
       date: "2025",
       location: "Nigeria",
-      attendance: "200+",
+      attendance: "250+",
       status: "Completed",
       description: "Our inaugural conference established a strong foundation of positive change. Through structured bootcamps and networking, we empowered 200 amazing emerging leaders.",
       link: "/programs/uylp-2025",
