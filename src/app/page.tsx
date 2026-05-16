@@ -2,17 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Target, Users, Zap, Camera, HeartHandshake } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { HeroSlideshow } from "@/components/ui/HeroSlideshow";
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
       <section className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Background gradient effects */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-iv-red/20 rounded-full blur-[120px] mix-blend-screen" />
-          <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px] mix-blend-screen" />
-        </div>
+        {/* Background slideshow with kenburns effect */}
+        <HeroSlideshow />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
