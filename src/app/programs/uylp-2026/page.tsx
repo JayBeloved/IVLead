@@ -23,7 +23,7 @@ export default function UYLP2026() {
 
   const agendaItems = [
     { time: "9:00 AM – 9:10 AM", title: "Opening Session", description: "Opening Prayer, National Anthem, Welcome Address", speaker: "Moderator: Oluwarantimi" },
-    { time: "9:10 AM – 9:25 AM", title: "The Leadership Mandate: How IVLEAD is Bridging the Gap", description: "", speaker: "Executive Director", slideUrl: "/slides/uylp-2026/executive-director-The-Leadership-Mandate.pdf" },
+    { time: "9:10 AM – 9:25 AM", title: "The Leadership Mandate: How IVLEAD is Bridging the Gap", description: "", speaker: "Executive Director", slideUrl: "https://gemini.google.com/share/c88e4fe12102" },
     { time: "9:25 AM – 9:55 AM", title: "Keynote Session 1: Building Resilient Systems", description: "", speaker: "Dr. Tobi Moody" },
     { time: "9:55 AM – 10:25 AM", title: "Keynote Session 2: Leading with Empathy", description: "", speaker: "Prof. Ehiz", slideUrl: "/slides/uylp-2026/prof-ehiz-Leading-with-Empathy-Presentation.pdf" },
     { time: "10:25 AM – 11:10 AM", title: "Panel Session 1: The Innovation Lab", description: "Solving Local Problems with Global Tools. Practical application of human-centered design in Nigerian communities.", speaker: "Moderator: Mimi K | Panelists: Phillip Idoko, Mr. Akin, Lucy Abeng" },
