@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Calendar, MapPin, Users, Lightbulb, MessageSquare, HandHeart, CheckCircle2, ArrowRight, Clock, Target } from "lucide-react";
+import { Calendar, MapPin, Users, Lightbulb, MessageSquare, HandHeart, CheckCircle2, ArrowRight, Clock, Target, Download, FileText } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 export default function UYLP2026() {
@@ -23,12 +23,12 @@ export default function UYLP2026() {
 
   const agendaItems = [
     { time: "9:00 AM – 9:10 AM", title: "Opening Session", description: "Opening Prayer, National Anthem, Welcome Address", speaker: "Moderator: Oluwarantimi" },
-    { time: "9:10 AM – 9:25 AM", title: "The Leadership Mandate: How IVLEAD is Bridging the Gap", description: "", speaker: "Executive Director" },
+    { time: "9:10 AM – 9:25 AM", title: "The Leadership Mandate: How IVLEAD is Bridging the Gap", description: "", speaker: "Executive Director", slideUrl: "/slides/uylp-2026/executive-director-The-Leadership-Mandate.pdf" },
     { time: "9:25 AM – 9:55 AM", title: "Keynote Session 1: Building Resilient Systems", description: "", speaker: "Dr. Tobi Moody" },
-    { time: "9:55 AM – 10:25 AM", title: "Keynote Session 2: Leading with Empathy", description: "", speaker: "Prof. Ehiz" },
+    { time: "9:55 AM – 10:25 AM", title: "Keynote Session 2: Leading with Empathy", description: "", speaker: "Prof. Ehiz", slideUrl: "/slides/uylp-2026/prof-ehiz-Leading-with-Empathy-Presentation.pdf" },
     { time: "10:25 AM – 11:10 AM", title: "Panel Session 1: The Innovation Lab", description: "Solving Local Problems with Global Tools. Practical application of human-centered design in Nigerian communities.", speaker: "Moderator: Mimi K | Panelists: Phillip Idoko, Mr. Akin, Lucy Abeng" },
-    { time: "11:10 AM – 11:40 AM", title: "Keynote Session 3: Future-Proofing Your Leadership", description: "", speaker: "Dr. Osagie Itamah" },
-    { time: "11:40 AM – 12:10 PM", title: "Keynote Session 4: Financial Intelligence for Purpose-Driven Leaders", description: "", speaker: "Mr. Taiwo Ajani" },
+    { time: "11:10 AM – 11:40 AM", title: "Keynote Session 3: Future-Proofing Your Leadership", description: "", speaker: "Dr. Osagie Itamah", slideUrl: "/slides/uylp-2026/dr-osagie-itamah-Future-Proofing-Your-Leadership.pdf" },
+    { time: "11:40 AM – 12:10 PM", title: "Keynote Session 4: Financial Intelligence for Purpose-Driven Leaders", description: "", speaker: "Mr. Taiwo Ajani", slideUrl: "/slides/uylp-2026/pastor-taiwo-ajani-Financial-Intelligence-for-Purpose-Driven-Leaders.pdf" },
     { time: "12:10 PM – 12:30 PM", title: "Interactive Questions & Answers Session", description: "", speaker: "" },
     { time: "12:30 PM – 12:40 PM", title: "Spoken Word Performance", description: "", speaker: "" },
     { time: "12:40 PM – 12:50 PM", title: "10-Minute Spotlight Session: Start Before You're Ready", description: "", speaker: "Divine Daniel; Host, The Morning Gear Podcast" },
@@ -39,6 +39,8 @@ export default function UYLP2026() {
     { time: "2:25 PM – 2:40 PM", title: "Presentation of awards/certificates", description: "", speaker: "" },
     { time: "2:40 PM – 2:45 PM", title: "Closing Remarks", description: "", speaker: "" }
   ];
+
+  const presentations = agendaItems.filter(item => item.slideUrl);
 
   return (
     <div className="flex flex-col items-center">
@@ -132,11 +134,69 @@ export default function UYLP2026() {
                       <p className="text-slate-400 text-sm mb-3">{item.description}</p>
                     )}
                     {item.speaker && (
-                      <div className="inline-flex items-center text-sm font-medium text-slate-300 bg-white/5 px-3 py-1.5 rounded-full border border-white/5">
-                        <Users className="w-3.5 h-3.5 mr-2 text-iv-red-light" />
-                        {item.speaker}
+                      <div className="flex flex-wrap items-center gap-3">
+                        <div className="inline-flex items-center text-sm font-medium text-slate-300 bg-white/5 px-3 py-1.5 rounded-full border border-white/5">
+                          <Users className="w-3.5 h-3.5 mr-2 text-iv-red-light" />
+                          {item.speaker}
+                        </div>
+                        {item.slideUrl && (
+                          <a href={item.slideUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-medium text-white bg-iv-red/20 hover:bg-iv-red/40 px-3 py-1.5 rounded-full border border-iv-red/30 transition-colors">
+                            <Download className="w-3.5 h-3.5 mr-2 text-iv-red-light" />
+                            View Slides
+                          </a>
+                        )}
                       </div>
                     )}
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Speaker Presentations Library */}
+      <section className="w-full py-24 bg-[#0a101f] border-t border-white/5 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-16">
+            <div className="inline-flex items-center justify-center p-3 bg-iv-red/10 rounded-full mb-6">
+              <FileText className="w-8 h-8 text-iv-red-light" />
+            </div>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 text-white">Summit Resources</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">Access and download the presentation slides from our esteemed speakers to review their insights and frameworks.</p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {presentations.map((pres, idx) => (
+              <AnimatedSection key={idx} delay={idx * 0.1}>
+                <div className="bg-iv-blue/80 border border-white/10 rounded-2xl p-8 h-full flex flex-col hover:border-iv-red/30 transition-colors group">
+                  <div className="flex-1">
+                    <div className="inline-flex items-center px-3 py-1 bg-white/5 text-slate-300 rounded-full text-xs font-semibold mb-4 border border-white/10">
+                      Presentation
+                    </div>
+                    <h3 className="text-xl font-heading font-bold text-white mb-2 group-hover:text-iv-red-light transition-colors">{pres.title}</h3>
+                    <p className="text-slate-400 text-sm mb-6 flex items-center">
+                      <Users className="w-4 h-4 mr-2" />
+                      {pres.speaker}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-4 mt-auto pt-6 border-t border-white/10">
+                    <a 
+                      href={pres.slideUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-xl text-sm font-medium transition-colors"
+                    >
+                      View Slides
+                    </a>
+                    <a 
+                      href={pres.slideUrl} 
+                      download
+                      className="flex-1 flex items-center justify-center px-4 py-2.5 bg-iv-red hover:bg-iv-red-light text-white rounded-xl text-sm font-medium transition-colors shadow-lg shadow-iv-red/20"
+                    >
+                      <Download className="w-4 h-4 mr-2" />
+                      Download
+                    </a>
                   </div>
                 </div>
               </AnimatedSection>
